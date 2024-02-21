@@ -1,0 +1,14 @@
+def potencia (base, expo):
+    if expo==0:
+        return 1
+    else:
+        return base*potencia(base, (expo-1))
+
+
+print ("ingresar la base: ")
+base = int (input())
+print ("ingresar el exponente: ")
+expo = int (input())
+z=potencia(base,expo)
+print(z)
+    
