@@ -1,0 +1,25 @@
+//fibonacci-katherine vargas eguez 
+#include <iostream>
+using namespace std;
+
+int fibonacci(int num) {
+  if (num <= 1) return num;
+  return fibonacci(num - 1) + fibonacci(num - 2);
+}
+
+void imprimirSerieFibonacci(int n) {
+  for (int i = 0; i < n; i++) {
+    cout << fibonacci(i) << " ";
+  }
+}
+
+int main() {
+  int num;
+  cout << "Ingresa un número: ";
+  cin >> num;
+  
+  cout << "Serie de Fibonacci: ";
+  imprimirSerieFibonacci(num);
+  
+  return 0;
+}
