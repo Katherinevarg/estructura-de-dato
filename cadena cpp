@@ -1,0 +1,74 @@
+include"Cadenas.h"
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	int opcion;
+	string nombre;
+	int opcion;
+	int pos;
+	int tamanio;
+	float a, b;
+	Cadenas can1;
+	do {
+		//Desplegar las opciones
+		cout << "\t\t Menu \n";
+		cout << "\t\t ==== \n";
+		cout << "1. pedir un string\n";
+		cout << "2. longitud\n";
+		cout << "3. \n";
+		cout << "4. contar vocales \n";
+		cout << "5. sacar un substring\n";
+		cout << "6. encontar un caracter\n";
+		cout << "Opcion: ";
+		cin >> opcion;
+		// Condicional multiple
+		switch (opcion)
+		{
+		case 1:
+			cin.ignore();
+			cout << "Ingresar un string:";
+			getline(cin, nombre);
+			can1.set_cadenas(nombre);
+			break;
+		case 2: 
+			cout << "la longitud es: " << can1.tamanio();
+			cin >> a;
+			cout << "La raiz es: " << raiz(a);
+			break;
+		case 3:
+			break;
+		case 4:
+			cout << "la longitud es: " << can1.tamanio();
+			cin >> a;
+			cout << "La raiz es: " << raiz(a);
+			break;
+		case 5:
+			cout << endl << "Ejemplo de uso de substring" << endl;
+			cout << endl << "Ingrese desde donde desea extraer el substring: ";
+			cin >> pos;
+			cout << nombre.substr(pos, longitud - pos);
+			cin.ignore();
+			break;
+		case 6:
+			cout << var2.find(' ');
+			longitud = var2.length();
+			for (int i = 0; i < longitud; i++)
+				if (var2.at(i) == ' ')
+					cout << endl << "Existe un espacio en: " << i;
+			break;
+		case 0: cout << "Saliendo del Menu";
+			break;
+		default:
+			cout << "ERROR de opcion";
+			break;
+		}
+		getch();
+		
+	} while (opcion != 0);
+	getch();
+
+}
+}
